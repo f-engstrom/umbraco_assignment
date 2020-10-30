@@ -1,0 +1,18 @@
+{
+  "id": "f9d46f2b-6abe-4f4a-8707-7cf462c927c5",
+  "name": "Send template email to frans.engstrom@learnet.se",
+  "form": "86974042-9baf-42a6-adb8-41a7e10ff04a",
+  "active": true,
+  "includeSensitiveData": "False",
+  "workflowTypeId": "17c61629-d984-4e86-b43b-a8407b3efea9",
+  "executesOn": "Submitted",
+  "settings": {
+    "Email": "frans.engstrom@learnet.se",
+    "SenderEmail": "",
+    "ReplyToEmail": "",
+    "Subject": "The Form '{form_name}' was submitted",
+    "RazorViewFilePath": "Forms/Emails/Example-Template.cshtml",
+    "Attachment": ""
+  },
+  "sortOrder": 1
+}

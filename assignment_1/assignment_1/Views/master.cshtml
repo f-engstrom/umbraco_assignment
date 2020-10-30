@@ -4,6 +4,8 @@
     Layout = null;
     // Get basic design settings from the homepage
     var home = (Home)Model.Root();
+        var selection = home.Children.Where(x => x.IsVisible());
+
     var font = home.Font;
     var colorTheme = home.ColorTheme;
 }
@@ -17,64 +19,47 @@
     <title>@Model.Name - @home.Sitename</title>
     <meta name="description" content="">
     <meta name="author" content="">
+    		<link rel="stylesheet" href="/assets/css/main.css" />
 
     <link rel="stylesheet" href="@Url.Content("~/css/umbraco-starterkit-style.css")" />
     @RenderSection("Header", required: false)
 </head>
 
-<body class="frontpage theme-font-@font theme-color-@colorTheme">
-    <div class="mobile-nav">
-        <nav class="nav-bar">
-            @Html.Partial("~/views/partials/navigation/topNavigation.cshtml")
-        </nav>
-    </div>
 
-    <header class="header">
+<body>
 
-        <div class="logo">
-            @if (home.SiteLogo != null && !string.IsNullOrEmpty(home.SiteLogo.Url))
-            {
-                <div class="nav-link--home">
-                    <img class="logo-image" src="@home.SiteLogo.Url" alt="@home.Sitename">
-                </div>
-            }
-            else
-            {
-                <a class="nav-link nav-link--home nav-link--home__text logo-text" href="/">@home.Sitename</a>
-            }
-        </div>
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="/" class="logo">A webshop</a>
+							<nav id="nav">
+				<ul class="links">
+				@foreach (var item in selection)
+{
+    <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null)" href="@item.Url">@item.Name</a>
+}
+				</ul>
+			</nav>
+				</div>
+			</header>
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 
-        <nav class="nav-bar top-nav">
-            @Html.Partial("~/Views/Partials/Navigation/TopNavigation.cshtml")
-        </nav>
-
-        <div class="mobile-nav-handler">
-            <div class="hamburger lines" id="toggle-nav">
-                <span></span>
-            </div>
-        </div>
-
-    </header>
-
-    <main>
+	    <main>
         @RenderBody()
     </main>
 
-    <footer class="section--themed">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 ta-center">
-                    @home.FooterAddress
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/skel.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+			    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/mvc/5.2.3/jquery.validate.unobtrusive.min.js"></script>
     <script src="@Url.Content("~/scripts/umbraco-starterkit-app.js")"></script>
 
-</body>
+	</body>
+
 
 </html>
+
