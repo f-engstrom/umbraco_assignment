@@ -15,28 +15,6 @@
               "width": 12,
               "fields": [
                 {
-                  "caption": "Consent for storing submitted data",
-                  "tooltip": null,
-                  "placeholder": null,
-                  "cssClass": null,
-                  "alias": "dataConsent",
-                  "id": "eba9755d-2c13-44ee-a7de-70f8bd6d27f3",
-                  "fieldTypeId": "a72c9df9-3847-47cf-afb8-b86773fd12cd",
-                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
-                  "dataSourceFieldKey": null,
-                  "containsSensitiveData": false,
-                  "mandatory": true,
-                  "regex": null,
-                  "requiredErrorMessage": "Consent is required to store and process the data in this form.",
-                  "invalidErrorMessage": null,
-                  "condition": null,
-                  "settings": {
-                    "AcceptCopy": "Yes, I give permission to store and process my data"
-                  },
-                  "preValues": null,
-                  "allowedUploadTypes": null
-                },
-                {
                   "caption": "Name",
                   "tooltip": null,
                   "placeholder": null,
@@ -59,7 +37,8 @@
                     "rules": []
                   },
                   "settings": {
-                    "Placeholder": "Your name"
+                    "Placeholder": "Your name",
+                    "DefaultValue": ""
                   },
                   "preValues": [],
                   "allowedUploadTypes": null
@@ -87,8 +66,35 @@
                     "rules": []
                   },
                   "settings": {
-                    "Placeholder": "youremail@something.com"
+                    "Placeholder": "youremail@something.com",
+                    "DefaultValue": ""
                   },
+                  "preValues": [],
+                  "allowedUploadTypes": null
+                },
+                {
+                  "caption": "Message",
+                  "tooltip": null,
+                  "placeholder": null,
+                  "cssClass": null,
+                  "alias": "message",
+                  "id": "c633c2f7-ce89-4946-e4c4-bcd09df162ed",
+                  "fieldTypeId": "023f09ac-1445-4bcb-b8fa-ab49f33bd046",
+                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
+                  "dataSourceFieldKey": null,
+                  "containsSensitiveData": false,
+                  "mandatory": true,
+                  "regex": null,
+                  "requiredErrorMessage": "Please don't screw up now",
+                  "invalidErrorMessage": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
+                  "settings": {},
                   "preValues": [],
                   "allowedUploadTypes": null
                 }
