@@ -1,0 +1,24 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Categories>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "master.cshtml";
+	var selection = Umbraco.Content(Guid.Parse("771832a3-1b68-4d0b-a0c8-3675420766a1"))
+    .Children()
+    .Where(x => x.IsVisible());
+}
+
+
+<ul>
+	@foreach (var item in selection)
+	{
+		<li>
+			<a href="@item.Url">@item.Name
+
+			<img class="product-image" src="@(item.Value<IPublishedContent>("categoryImage").Url)" alt=" image" /></a>
+		</li>
+	}
+</ul>
+
+
+
+

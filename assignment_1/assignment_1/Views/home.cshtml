@@ -2,7 +2,6 @@
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
     Layout = "master.cshtml";
-    var backgroundImage = Model.HeroBackgroundImage != null ? Model.HeroBackgroundImage.Url : String.Empty;
     var images = Model.Value<IEnumerable<IPublishedContent>>("images");
 }
 
