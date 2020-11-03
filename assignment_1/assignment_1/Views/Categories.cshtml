@@ -7,18 +7,31 @@
     .Where(x => x.IsVisible());
 }
 
+<section class="section">
 
-<ul>
-	@foreach (var item in selection)
+    <div class="container">
+
+
+        <div class="product-grid">
+
+<div class="card-group">
+    	@foreach (var item in selection)
 	{
-		<li>
-			<a href="@item.Url">@item.Name
+				<a href="@item.Url">
 
-			<img class="product-image" src="@(item.Value<IPublishedContent>("categoryImage").Url)" alt=" image" /></a>
-		</li>
+	<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="@(item.Value<IPublishedContent>("categoryImage").Url)" alt=" image" >
+  <div class="card-body">
+    <p class="card-text">@item.Name</p>
+  </div>
+</div>
+		</a>
 	}
-</ul>
+</div>
 
+</div>
 
+</div>
+</section>
 
 
