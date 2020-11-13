@@ -17,7 +17,7 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "44874e8ee7c30cff")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5e86221ba1eabba2")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 namespace Umbraco.Web.PublishedModels
@@ -53,6 +53,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("pageName")]
 		public string PageName => global::Umbraco.Web.PublishedModels.Content.GetPageName(this);
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
 	}
 
 	// Mixin Content Type with alias "content"
@@ -62,6 +69,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>page name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		string PageName { get; }
+
+		/// <summary>umbracoNaviHide</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		bool UmbracoNaviHide { get; }
 	}
 
 	/// <summary>content</summary>
@@ -99,6 +110,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for page name</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		public static string GetPageName(IContent that) => that.Value<string>("pageName");
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => GetUmbracoNaviHide(this);
+
+		/// <summary>Static getter for umbracoNaviHide</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static bool GetUmbracoNaviHide(IContent that) => that.Value<bool>("umbracoNaviHide");
 	}
 
 	/// <summary>Blog Posts</summary>
@@ -151,6 +173,55 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+
+		///<summary>
+		/// author
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("blogPostAuthor")]
+		public object BlogPostAuthor => this.Value("blogPostAuthor");
+
+		///<summary>
+		/// body
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("blogPostBody")]
+		public global::System.Web.IHtmlString BlogPostBody => this.Value<global::System.Web.IHtmlString>("blogPostBody");
+
+		///<summary>
+		/// date
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("blogPostDate")]
+		public global::System.DateTime BlogPostDate => this.Value<global::System.DateTime>("blogPostDate");
+
+		///<summary>
+		/// excerpt
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("blogPostExcerpt")]
+		public global::System.Web.IHtmlString BlogPostExcerpt => this.Value<global::System.Web.IHtmlString>("blogPostExcerpt");
+
+		///<summary>
+		/// image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("blogPostImage")]
+		public global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue BlogPostImage => this.Value<global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue>("blogPostImage");
+
+		///<summary>
+		/// subheader
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("blogPostSubHeader")]
+		public global::System.Web.IHtmlString BlogPostSubHeader => this.Value<global::System.Web.IHtmlString>("blogPostSubHeader");
+
+		///<summary>
+		/// title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("blogPostTitle")]
+		public string BlogPostTitle => this.Value<string>("blogPostTitle");
 	}
 
 	/// <summary>content and settings</summary>
@@ -177,6 +248,126 @@ namespace Umbraco.Web.PublishedModels
 		{ }
 
 		// properties
+	}
+
+	/// <summary>Registration</summary>
+	[PublishedModel("registration")]
+	public partial class Registration : PublishedContentModel, IContent
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "registration";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Registration, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Registration(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// page name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("pageName")]
+		public string PageName => global::Umbraco.Web.PublishedModels.Content.GetPageName(this);
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+	}
+
+	/// <summary>Login</summary>
+	[PublishedModel("login")]
+	public partial class Login : PublishedContentModel, IContent
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "login";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Login, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Login(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// page name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("pageName")]
+		public string PageName => global::Umbraco.Web.PublishedModels.Content.GetPageName(this);
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+	}
+
+	/// <summary>Error</summary>
+	[PublishedModel("error")]
+	public partial class Error : PublishedContentModel, IContent
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "error";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Error, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public Error(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// page name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("pageName")]
+		public string PageName => global::Umbraco.Web.PublishedModels.Content.GetPageName(this);
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
 	}
 
 	/// <summary>Folder</summary>

@@ -1,5 +1,42 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.BlogPosts>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = null;
+	Layout = "Master.cshtml";
+		var selection = Umbraco.Content(Guid.Parse("7ae48248-9252-4f8b-a0d1-816c1a914d68"))
+    .Children()
+    .Where(x => x.IsVisible());
+	
+
 }
+
+@foreach (var item in selection)
+	{
+
+					<article class="post">
+								<header>
+									<div class="title">
+
+										<h2><a href="single.html">@item.Value("blogPostTitle")</a></h2>
+										<p>@item.Value("blogPostSubheader")</p>
+									</div>
+									<div class="meta">
+										<time class="published" datetime="2015-11-01">@item.Value("blogPostDate")</time>
+										<a href="#" class="author"><span class="name">@item.Value("blogPostAuthor")</span><img src="images/avatar.jpg" alt="" /></a>
+									</div>
+								</header>
+								<a href="single.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<p>@item.Value("blogPostExcerpt")</p>
+								<footer>
+									<ul class="actions">
+										<li><a href="@item.Url" class="button large">Continue Reading</a></li>
+									</ul>
+									<ul class="stats">
+										<li><a href="#">General</a></li>
+										<li><a href="#" class="icon solid fa-heart">28</a></li>
+										<li><a href="#" class="icon solid fa-comment">128</a></li>
+									</ul>
+								</footer>
+							</article>
+							
+		
+	}

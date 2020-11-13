@@ -22,7 +22,22 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c16771e-e390-4d86-b212-b94330a507ce" name="Default Changelist" comment="" />
+    <list default="true" id="9c16771e-e390-4d86-b212-b94330a507ce" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.assignment_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignment_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.dll.path" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.dll.path" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/App_Data/Models/models.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/App_Data/Models/models.generated.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/App_Data/Models/models.hash" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/App_Data/Models/models.hash" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/Master.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/Master.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/blogpost.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/blogpost.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/content.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/content.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/home.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/home.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogpost.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogpost.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogposts.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogposts.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../losen.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../losen.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,14 +47,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Partials/login.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/assignment_2/Views/Master.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/assignment_2/Views/Home.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/App_Data/Models/all.generated.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/assignment_2/Views/Home.cshtml" />
         <option value="$PROJECT_DIR$/assignment_2/Views/Master.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Partials/login.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Erorr.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" />
       </list>
     </option>
   </component>
@@ -83,7 +107,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605264104270</updated>
-      <workItem from="1605264122804" duration="1959000" />
+      <workItem from="1605264122804" duration="10539000" />
     </task>
     <servers />
   </component>

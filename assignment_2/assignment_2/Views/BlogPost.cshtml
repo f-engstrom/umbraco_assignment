@@ -1,5 +1,37 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.BlogPost>
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
-	Layout = null;
+	Layout = "Master.cshtml";
+}
+
+@{
+	
+	var title = Model.Value("blogPostTitle");
+	var subheader = Model.Value("blogPostSubHeader");
+	var date = Model.Value("blogPostDate");
+	var author = Model.Value("blogPostAuthor");
+	var body = Model.Value("blogPostBody");
+	
+	<article class="post">
+		<header>
+			<div class="title">
+				<h2><a href="#">@title</a></h2>
+				<p>@subheader</p>
+			</div>
+			<div class="meta">
+				<time class="published" datetime="2015-11-01">@date</time>
+				<a href="#" class="author"><span class="name">@author</span><img src="images/avatar.jpg" alt="" /></a>
+			</div>
+		</header>
+		<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+		<p>@body</p>
+		<footer>
+			<ul class="stats">
+				<li><a href="#">General</a></li>
+				<li><a href="#" class="icon solid fa-heart">28</a></li>
+				<li><a href="#" class="icon solid fa-comment">128</a></li>
+			</ul>
+		</footer>
+	</article>
+	
 }
