@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.BlogPost>
+@using Umbraco.Core.Models.PublishedContent
 @using ContentModels = Umbraco.Web.PublishedModels;
+@using Umbraco.Core.PropertyEditors.ValueConverters;
 @{
 	Layout = "Master.cshtml";
 }
@@ -9,9 +11,11 @@
 	var title = Model.Value("blogPostTitle");
 	var subheader = Model.Value("blogPostSubHeader");
 	var date = Model.Value("blogPostDate");
-	var author = Model.Value("blogPostAuthor");
+	 var author = Model.Value<IPublishedContent>("blogPostAuthor");
+
 	var body = Model.Value("blogPostBody");
-	
+	var imgCropper = Model.Value<ImageCropperValue>("blogPostImage");
+	var imgUrl = imgCropper.Src + imgCropper.GetCropUrl("Main");	
 	<article class="post">
 		<header>
 			<div class="title">
@@ -20,10 +24,10 @@
 			</div>
 			<div class="meta">
 				<time class="published" datetime="2015-11-01">@date</time>
-				<a href="#" class="author"><span class="name">@author</span><img src="images/avatar.jpg" alt="" /></a>
+				<a href="#" class="author"><span class="name">@author.Name</span><img src="images/avatar.jpg" alt="" /></a>
 			</div>
 		</header>
-		<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+		<span class="image featured"><img src="@imgUrl" alt="" /></span>
 		<p>@body</p>
 		<footer>
 			<ul class="stats">

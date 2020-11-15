@@ -1,8 +1,38 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using System.ComponentModel.Design.Serialization
+@using System.Web.Security
+@using Umbraco.Core.Models
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
 	Layout = "Master.cshtml";
 }
 
 
-<h1>I work</h1>
+<section>
+							
+	@if(!Members.GetCurrentLoginStatus().IsLoggedIn) { 
+							
+		<h2>To read some awsome content either </h2>
+							  
+		<ul class="actions stacked">
+			<li><a href="/login" class="button large fit">Log In</a></li>
+		</ul>
+		
+		<h2>Or </h2>
+
+		
+		<ul class="actions stacked">
+			<li><a href="/register" class="button large fit">Sign Up</a></li>
+		</ul>
+								  
+	}
+	else
+	{
+		
+		
+		<h2>Welcome @Members.CurrentUserName</h2>
+		<p>Find something awsome to read</p>
+	
+							
+	}
+</section>

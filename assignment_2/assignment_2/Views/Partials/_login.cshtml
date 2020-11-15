@@ -1,0 +1,31 @@
+﻿@using assignment_2.Controllers
+@using assignment_2.Models
+
+@{
+    
+    var model = new LoginViewModel();
+    
+}
+
+
+@using (Html.BeginUmbracoForm<LoginController>("SubmitLogin"))
+{
+    
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Login</legend>
+
+
+        @Html.LabelFor(m => model.Username)
+        @Html.TextBoxFor(m => model.Username)
+        
+        <br />
+
+        @Html.LabelFor(m => model.Password)
+        @Html.PasswordFor(m => model.Password)
+        <br />
+
+        <button>Login</button>
+    </fieldset>
+}
+

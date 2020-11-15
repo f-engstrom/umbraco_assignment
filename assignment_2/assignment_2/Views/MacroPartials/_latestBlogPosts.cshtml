@@ -1,0 +1,31 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+
+	var selection = Umbraco.Content(Guid.Parse("7ae48248-9252-4f8b-a0d1-816c1a914d68"))
+    .ChildrenOfType("blogPost")
+    .Where(x => x.IsVisible()).Take(4);
+}
+	<section>
+	<div class="mini-posts">
+
+	@foreach (var item in selection)
+	{
+
+									<!-- Mini Post -->
+										<article class="mini-post">
+											<header>
+												<h3><a href="@item.Url"> @item.Value("blogPostTitle")</a></h3>
+												<time class="published" datetime="2015-10-20">@item.Value("blogPostDate")</time>
+												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+											</header>
+											<a href="single.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
+										</article>
+	
+	}
+		</div>
+							</section>
+
+
+
+

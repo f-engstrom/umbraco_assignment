@@ -1,5 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using System.Web.Security
+@using assignment_2.Controllers
+
+
 @{
+	var site = Model.Root();
 	Layout = null;
 }
 
@@ -24,10 +29,12 @@
 
 				<!-- Header -->
 					<header id="header">
-						<h1><a href="/">Future Imperfect</a></h1>
+						<h1><a href="/">@site.Value("pageName")</a></h1>
 						<nav class="links">
-						    
-							@Html.Partial("navigation")
+						    @if(Members.GetCurrentLoginStatus().IsLoggedIn) { 
+							    @Html.Partial("navigation")
+						    }
+						   
 						</nav>
 						<nav class="main">
 							<ul>
@@ -45,54 +52,45 @@
 					</header>
 
 				<!-- Menu -->
-					<section id="menu">
+					<section id="menu"><!-- Actions -->
+						<section>
+							
+							  @if(!Members.GetCurrentLoginStatus().IsLoggedIn) { 
+								  
+							  
+							<ul class="actions stacked">
+								<li><a href="/login" class="button large fit">Log In</a></li>
+							</ul>
+								  <ul class="actions stacked">
+									  <li><a href="/register" class="button large fit">Sign Up</a></li>
+								  </ul>
+								  
+							  }
+							  else
+							  {
+								  
+								  var username = Members.CurrentUserName;
+								
+								  
+								  <p>@username</p>
+								  
+								  using (Html.BeginUmbracoForm<LoginController>("SubmitLogout"))
 
-						<!-- Search -->
-							<section>
-								<form class="search" method="get" action="#">
-									<input type="text" name="query" placeholder="Search" />
-								</form>
-							</section>
+								  {
+								
+										  
+									  <fieldset>
+										  <ul class="actions stacked">
+											  <li><button class="button large fit">Log out</button></li>
 
-						<!-- Links -->
-							<section>
-								<ul class="links">
-									<li>
-										<a href="#">
-											<h3>Lorem ipsum</h3>
-											<p>Feugiat tempus veroeros dolor</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Dolor sit amet</h3>
-											<p>Sed vitae justo condimentum</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Feugiat veroeros</h3>
-											<p>Phasellus sed ultricies mi congue</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<h3>Etiam sed consequat</h3>
-											<p>Porta lectus amet ultricies</p>
-										</a>
-									</li>
-								</ul>
-							</section>
-
-						<!-- Actions -->
-							<section>
-								<ul class="actions stacked">
-									<li><a href="/login" class="button large fit">Log In</a></li>
-								</ul>
-									<ul class="actions stacked">
-                                									<li><a href="/register" class="button large fit">Sign Up</a></li>
-                                								</ul>
-							</section>
+										  </ul>									 
+										 </fieldset>
+								  }
+								  
+								
+							
+							  }
+						</section>
 
 					</section>
 
@@ -419,10 +417,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 						-->
 
 						<!-- Pagination -->
-							<ul class="actions pagination">
-								<li><a href="" class="disabled button large previous">Previous Page</a></li>
-								<li><a href="#" class="button large next">Next Page</a></li>
-							</ul>
+							
 
 					</div>
 
@@ -438,52 +433,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 								</header>
 							</section>
 
-						<!-- Mini Posts -->
-							<section>
-								<div class="mini-posts">
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="single.html">Vitae sed condimentum</a></h3>
-												<time class="published" datetime="2015-10-20">October 20, 2015</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="single.html" class="image"><img src="images/pic04.jpg" alt="" /></a>
-										</article>
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="single.html">Rutrum neque accumsan</a></h3>
-												<time class="published" datetime="2015-10-19">October 19, 2015</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="single.html" class="image"><img src="images/pic05.jpg" alt="" /></a>
-										</article>
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="single.html">Odio congue mattis</a></h3>
-												<time class="published" datetime="2015-10-18">October 18, 2015</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="single.html" class="image"><img src="images/pic06.jpg" alt="" /></a>
-										</article>
-
-									<!-- Mini Post -->
-										<article class="mini-post">
-											<header>
-												<h3><a href="single.html">Enim nisl veroeros</a></h3>
-												<time class="published" datetime="2015-10-17">October 17, 2015</time>
-												<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
-											</header>
-											<a href="single.html" class="image"><img src="images/pic07.jpg" alt="" /></a>
-										</article>
-
-								</div>
-							</section>
+					@Umbraco.RenderMacro("latestBlogPosts")
 
 						<!-- Posts List -->
 							<section>

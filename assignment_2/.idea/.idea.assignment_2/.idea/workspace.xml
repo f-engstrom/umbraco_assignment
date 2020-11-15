@@ -23,6 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c16771e-e390-4d86-b212-b94330a507ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assignment_2/Controllers/ContactFormController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment_2/Controllers/LoginController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment_2/Models/ContactFormViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment_2/Models/LoginViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment_2/Views/Partials/_contact.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assignment_2/Views/Partials/_login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.assignment_2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignment_2/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.assignment_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignment_2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.dll.path" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.dll.path" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.generated.cs" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/App_Data/Models/all.generated.cs" afterDir="false" />
@@ -30,13 +37,16 @@
       <change beforePath="$PROJECT_DIR$/assignment_2/App_Data/Models/models.hash" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/App_Data/Models/models.hash" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/Home.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/Home.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/Login.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2/Views/Master.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/Master.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/Partials/login.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/Partials/registration.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/Partials/registration.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Views/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Views/Web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/Web.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/Web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assignment_2/assignment_2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/assignment_2.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/blogpost.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/blogpost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/content.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/content.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/home.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/ContentTypes/home.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogpost.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogpost.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogposts.config" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/uSync/v8/Templates/blogposts.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../losen.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../losen.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +57,49 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Partials/login.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Master.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/MacroPartials/_latestBlogPosts.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81C76C49-CBF1-49B9-B335-A27760C86298/f1/54f924e8/Membership.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5D97019F-7842-404A-9A90-62A0F80FCAE1/fd/8c441168/WebPageBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/assignment_2/Views/Home.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/c5/d3cc64a6/ActionMethodDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Partials/navigation.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/8d/10f4070e/AsyncControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Registration.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2EA5AB4F-3707-456F-9DF2-CC1289D1FAC3/3F/UmbLoginController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Partials/registration.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81C76C49-CBF1-49B9-B335-A27760C86298/c7/f90dac89/HttpApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Master.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2EA5AB4F-3707-456F-9DF2-CC1289D1FAC3/3E/UmbRegisterController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/81C76C49-CBF1-49B9-B335-A27760C86298/e3/7aaacb12/HttpContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/b5/758de7ec/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/assignment_2/Views/Login.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/03C98CFC-8623-445A-8DB7-B66C6FFA5DEF/72/d77ea170/ReflectedActionDescriptor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/assignment_2/App_Data/Models/all.generated.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assignment_2/Views/Home.cshtml" />
-        <option value="$PROJECT_DIR$/assignment_2/Views/Master.cshtml" />
-        <option value="$PROJECT_DIR$/assignment_2/Views/Partials/login.cshtml" />
         <option value="$PROJECT_DIR$/assignment_2/Views/Erorr.cshtml" />
-        <option value="$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/MacroPartials/_latestBlogPosts.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Partials/login.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Partials/registration.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Home.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Models/LoginViewModel.cs" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/_login.cs" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Login.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Master.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Controllers/LoginController.cs" />
+        <option value="$PROJECT_DIR$/assignment_2/Models/ContactViewModel.cs" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Partials/_login.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Partials/_contact.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Controllers/ContactFormController.cs" />
+        <option value="$PROJECT_DIR$/assignment_2/Models/ContactFormViewModel.cs" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/Web.config" />
+        <option value="$PROJECT_DIR$/assignment_2/Web.config" />
         <option value="$PROJECT_DIR$/assignment_2/Views/BlogPosts.cshtml" />
+        <option value="$PROJECT_DIR$/assignment_2/Views/BlogPost.cshtml" />
       </list>
     </option>
   </component>
@@ -74,8 +110,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34975636" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29994586" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -108,13 +147,15 @@
       <option name="presentableId" value="Default" />
       <updated>1605264104270</updated>
       <workItem from="1605264122804" duration="10539000" />
+      <workItem from="1605368508239" duration="8038000" />
+      <workItem from="1605449504668" duration="11835000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -126,8 +167,135 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="455" height="464" key="DebuggerActiveHint" timestamp="1605461339611">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="455" height="464" key="DebuggerActiveHint/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605461339611" />
+    <state width="1878" height="99" key="GridCell.Tab.0.bottom" timestamp="1605459444459">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.0.bottom/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444459" />
+    <state width="1878" height="379" key="GridCell.Tab.0.bottom/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.0.center" timestamp="1605459444459">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.0.center/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444459" />
+    <state width="1878" height="379" key="GridCell.Tab.0.center/0.0.1440.870@0.0.1440.870" timestamp="1605393357654" />
+    <state width="1878" height="99" key="GridCell.Tab.0.left" timestamp="1605459444459">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.0.left/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444459" />
+    <state width="1878" height="379" key="GridCell.Tab.0.left/0.0.1440.870@0.0.1440.870" timestamp="1605393357654" />
+    <state width="1878" height="99" key="GridCell.Tab.0.right" timestamp="1605459444459">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.0.right/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444459" />
+    <state width="1878" height="379" key="GridCell.Tab.0.right/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.1.bottom" timestamp="1605459490678">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.1.bottom/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459490678" />
+    <state width="1878" height="379" key="GridCell.Tab.1.bottom/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.1.center" timestamp="1605459490678">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.1.center/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459490678" />
+    <state width="1878" height="379" key="GridCell.Tab.1.center/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.1.left" timestamp="1605459490678">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.1.left/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459490678" />
+    <state width="1878" height="379" key="GridCell.Tab.1.left/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.1.right" timestamp="1605459490678">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.1.right/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459490678" />
+    <state width="1878" height="379" key="GridCell.Tab.1.right/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.2.bottom" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.2.bottom/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.2.bottom/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.2.center" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.2.center/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.2.center/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.2.left" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.2.left/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.2.left/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.2.right" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.2.right/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.2.right/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.3.bottom" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.3.bottom/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.3.bottom/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.3.center" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.3.center/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.3.center/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.3.left" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.3.left/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.3.left/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.3.right" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.3.right/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.3.right/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.4.bottom" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.4.bottom/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.4.bottom/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.4.center" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.4.center/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.4.center/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.4.left" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.4.left/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.4.left/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state width="1878" height="99" key="GridCell.Tab.4.right" timestamp="1605459444327">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1878" height="99" key="GridCell.Tab.4.right/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605459444327" />
+    <state width="1878" height="379" key="GridCell.Tab.4.right/0.0.1440.870@0.0.1440.870" timestamp="1605393357655" />
+    <state x="461" y="170" key="SettingsEditor" timestamp="1605451329516">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="461" y="170" key="SettingsEditor/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605451329516" />
+    <state width="968" height="533" key="XDebugger.FullValuePopup" timestamp="1605450504633">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="968" height="533" key="XDebugger.FullValuePopup/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605450504633" />
+    <state x="514" y="255" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605449579945">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="514" y="255" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605449579945" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1605369983382">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="616" y="243" key="run.anything.popup/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605369983382" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1605451576781">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/-2880.0.1440.885/0.0.1920.1050@0.0.1920.1050" timestamp="1605451576781" />
   </component>
 </project>

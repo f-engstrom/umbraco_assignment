@@ -46,9 +46,17 @@
           <e p="tinyMceConfig.config" t="Include" />
           <e p="umbracoSettings.config" t="Include" />
         </e>
+        <e p="Controllers" t="Include">
+          <e p="ContactFormController.cs" t="Include" />
+          <e p="LoginController.cs" t="Include" />
+        </e>
         <e p="Global.asax" t="Include" />
         <e p="Media" t="Include">
           <e p="Web.config" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="ContactFormViewModel.cs" t="Include" />
+          <e p="LoginViewModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -57,6 +65,8 @@
         </e>
         <e p="Views" t="Include">
           <e p="Partials" t="Include">
+            <e p="_contact.cshtml" t="Include" />
+            <e p="_login.cshtml" t="Include" />
             <e p="BlockList" t="Include">
               <e p="Default.cshtml" t="Include" />
             </e>

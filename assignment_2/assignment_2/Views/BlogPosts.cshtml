@@ -1,4 +1,6 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.BlogPosts>
+@using Umbraco.Core.Models.PublishedContent
+
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
 	Layout = "Master.cshtml";
@@ -10,18 +12,20 @@
 }
 
 @foreach (var item in selection)
-	{
+{
 
+	var author = item.Value<IPublishedContent>("blogPostAuthor");
+		
 					<article class="post">
 								<header>
 									<div class="title">
 
-										<h2><a href="single.html">@item.Value("blogPostTitle")</a></h2>
+										<h2><a href="@item.Url">@item.Value("blogPostTitle")</a></h2>
 										<p>@item.Value("blogPostSubheader")</p>
 									</div>
 									<div class="meta">
 										<time class="published" datetime="2015-11-01">@item.Value("blogPostDate")</time>
-										<a href="#" class="author"><span class="name">@item.Value("blogPostAuthor")</span><img src="images/avatar.jpg" alt="" /></a>
+										<a href="#" class="author"><span class="name">@author.Name</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
 								<a href="single.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
@@ -40,3 +44,7 @@
 							
 		
 	}
+<ul class="actions pagination">
+	<li><a href="" class="disabled button large previous">Previous Page</a></li>
+	<li><a href="#" class="button large next">Next Page</a></li>
+</ul>

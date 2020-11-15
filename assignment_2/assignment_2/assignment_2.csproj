@@ -289,9 +289,15 @@
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Partials\_contact.cshtml" />
+    <Content Include="Views\Partials\_login.cshtml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ContactFormController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Models\ContactFormViewModel.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,11 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
 @using System.Web.Mvc.Html
+@using System.Web.Security
 @using ClientDependency.Core.Mvc
+@using Umbraco.Core.Models
 @using Umbraco.Web
 @using Umbraco.Web.Controllers
+@using Umbraco.Core.Services
 
 
 @{
@@ -14,7 +17,8 @@
     *@
 
     var registerModel = Members.CreateRegistrationModel();
-
+    registerModel.UsernameIsEmail = false;
+    
     @*
         Configurable here:
 
@@ -46,6 +50,9 @@
 
 @if (success)
 {
+    var member = Membership.GetUser();
+    IMemberService memberService = Services.MemberService;
+    memberService.AssignRole((int)member.ProviderUserKey, "ActiveMembers");
     @* This message will show if registerModel.RedirectUrl is not defined (default) *@
     <p>Registration succeeded.</p>
 }
@@ -62,6 +69,11 @@ else
             @Html.TextBoxFor(m => registerModel.Name)
             @Html.ValidationMessageFor(m => registerModel.Name)
             <br />
+            
+            @Html.LabelFor(m => registerModel.Username)
+            @Html.TextBoxFor(m => registerModel.Username)
+            @Html.ValidationMessageFor(m => registerModel.Username)
+            <br/>
 
             @Html.LabelFor(m => registerModel.Email)
             @Html.TextBoxFor(m => registerModel.Email)

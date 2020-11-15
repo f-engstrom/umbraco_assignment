@@ -1,0 +1,42 @@
+﻿@using assignment_2.Controllers
+@using assignment_2.Models
+@{
+    var success = TempData["FormSuccess"] != null;
+    var model = new ContactFormViewModel();
+
+
+    if( success)
+    {
+        <h1>Thank you for getting in touch!</h1>
+        
+    }
+    
+    
+}
+
+
+@using (Html.BeginUmbracoForm<ContactFormController>("HandleContactForm"))
+{
+    
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>Get in touch</legend>
+
+
+        @Html.LabelFor(m => model.Name)
+        @Html.TextBoxFor(m => model.Name)
+        
+        <br />
+
+        @Html.LabelFor(m => model.Email)
+        @Html.TextBoxFor(m => model.Email)
+        <br />
+
+           @Html.LabelFor(m => model.Message)
+                @Html.TextAreaFor(m => model.Message)
+                <br />
+        
+        <button>Send</button>
+    </fieldset>
+}
+

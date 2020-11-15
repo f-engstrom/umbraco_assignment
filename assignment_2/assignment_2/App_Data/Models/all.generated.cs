@@ -6,7 +6,7 @@ using  Umbraco.Core.Models;
 using  Umbraco.Core.Models.PublishedContent;
 using  Umbraco.Web;
 using  Umbraco.ModelsBuilder.Embedded;
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "5e86221ba1eabba2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c767c0f6a3aeae92")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
 
 
@@ -193,7 +193,7 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("blogPostAuthor")]
-		public object BlogPostAuthor => this.Value("blogPostAuthor");
+		public global::Umbraco.Core.Models.PublishedContent.IPublishedContent BlogPostAuthor => this.Value<global::Umbraco.Core.Models.PublishedContent.IPublishedContent>("blogPostAuthor");
 
 		///<summary>
 		/// body
@@ -364,6 +364,46 @@ namespace Umbraco.Web.PublishedModels
 
 		// ctor
 		public Error(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// page name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("pageName")]
+		public string PageName => global::Umbraco.Web.PublishedModels.Content.GetPageName(this);
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+	}
+
+	/// <summary>Contact Page</summary>
+	[PublishedModel("contactPage")]
+	public partial class ContactPage : PublishedContentModel, IContent
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "contactPage";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ContactPage, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public ContactPage(IPublishedContent content)
 			: base(content)
 		{ }
 
