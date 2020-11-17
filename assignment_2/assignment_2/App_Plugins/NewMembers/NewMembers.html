@@ -1,0 +1,8 @@
+﻿<h1>New members here</h1>
+
+<div class="NewMembers" ng-controller="CustomNewMembersController as vm">
+
+        <ul>
+            <li ng-repeat="member in vm.sortedMembers">{{member.name}} - {{member.email}} - {{member.createDate}}</li>
+        </ul>
+    

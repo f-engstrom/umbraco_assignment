@@ -11,19 +11,12 @@
 <section>
 							
 	@if(!Members.GetCurrentLoginStatus().IsLoggedIn) { 
-							
-		<h2>To read some awsome content either </h2>
+			
+		
+		<h2>Welcome! </h2>
+		<p>This is a members only blog where we share ideas on a range of topics either <a href="/login" >log in</a> to your awsome account or <a href="/register" >sign up</a> to create a new and fresh one.  </p>
 							  
-		<ul class="actions stacked">
-			<li><a href="/login" class="button large fit">Log In</a></li>
-		</ul>
 		
-		<h2>Or </h2>
-
-		
-		<ul class="actions stacked">
-			<li><a href="/register" class="button large fit">Sign Up</a></li>
-		</ul>
 								  
 	}
 	else

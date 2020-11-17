@@ -1,0 +1,20 @@
+﻿{
+        "dashboards":  [
+        {
+        "alias": "NewMembers",
+        "view":  "/App_Plugins/NewMembers/NewMembers.html",
+        "sections":  [ "content" ],
+        "weight": -10,
+        "access": [
+        { "deny": "translator" },
+        { "grant": "admin" }
+        ]
+        }
+        ],
+        "javascript": [
+        "~/App_Plugins/NewMembers/newmembers.controller.js"
+        ],
+        "css": [
+        "~/App_Plugins/NewMembers/NewMembers.css"
+        ]
+        }

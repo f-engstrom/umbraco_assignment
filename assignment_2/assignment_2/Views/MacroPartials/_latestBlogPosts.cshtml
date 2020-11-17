@@ -4,7 +4,7 @@
 
 	var selection = Umbraco.Content(Guid.Parse("7ae48248-9252-4f8b-a0d1-816c1a914d68"))
     .ChildrenOfType("blogPost")
-    .Where(x => x.IsVisible()).Take(4);
+    .Where(x => x.IsVisible()).Take(4).OrderByDescending(item => item.Value<DateTime>("blogPostDate"));;
 }
 	<section>
 	<div class="mini-posts">

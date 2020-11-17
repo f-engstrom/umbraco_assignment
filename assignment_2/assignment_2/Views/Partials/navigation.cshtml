@@ -10,7 +10,9 @@
 
 @{ var selection = Model.Root().Children.Where(x => x.IsVisible()).ToArray(); }
 
-@if (selection.Length > 0)
+   @if(Members.GetCurrentLoginStatus().IsLoggedIn) { 
+						   
+if (selection.Length > 0)
 {
     <ul>
         @foreach (var item in selection)
@@ -21,3 +23,32 @@
         }
     </ul>
 }
+   }
+   else
+   {
+       <ul>
+         
+           <li >
+               <a href="/login">Login</a>
+           </li>
+           <li >
+               <a href="/register">Sign up</a>
+           </li>
+           
+             @foreach (var item in selection)
+                   {
+                       if (!item.Value<bool>("visibileInNavLoggedOut"))
+                       {
+                           continue;
+                       }
+                       
+                       <li class="@(item.IsAncestorOrSelf(Model) ? "current" : null)">
+                           <a href="@item.Url">@item.Name</a>
+                       </li>
+                   }
+        
+           
+           
+       </ul>
+       
+   }

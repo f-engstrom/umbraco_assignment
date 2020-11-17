@@ -17,8 +17,8 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Web;
 using Umbraco.ModelsBuilder.Embedded;
 
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "c767c0f6a3aeae92")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.2")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "33f4ebec626c1337")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedModels
 {
@@ -48,6 +48,27 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// about
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("siteAbout")]
+		public global::System.Web.IHtmlString SiteAbout => this.Value<global::System.Web.IHtmlString>("siteAbout");
+
+		///<summary>
+		/// siteName
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("siteName")]
+		public string SiteName => this.Value<string>("siteName");
+
+		///<summary>
+		/// slogan
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("siteSlogan")]
+		public string SiteSlogan => this.Value<string>("siteSlogan");
+
+		///<summary>
 		/// page name
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
@@ -60,6 +81,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => global::Umbraco.Web.PublishedModels.Content.GetVisibileInNavLoggedOut(this);
 	}
 
 	// Mixin Content Type with alias "content"
@@ -73,6 +101,10 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>umbracoNaviHide</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		bool UmbracoNaviHide { get; }
+
+		/// <summary>visibileInNavLoggedOut</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		bool VisibileInNavLoggedOut { get; }
 	}
 
 	/// <summary>content</summary>
@@ -121,6 +153,17 @@ namespace Umbraco.Web.PublishedModels
 		/// <summary>Static getter for umbracoNaviHide</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		public static bool GetUmbracoNaviHide(IContent that) => that.Value<bool>("umbracoNaviHide");
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => GetVisibileInNavLoggedOut(this);
+
+		/// <summary>Static getter for visibileInNavLoggedOut</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static bool GetVisibileInNavLoggedOut(IContent that) => that.Value<bool>("visibileInNavLoggedOut");
 	}
 
 	/// <summary>Blog Posts</summary>
@@ -288,6 +331,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => global::Umbraco.Web.PublishedModels.Content.GetVisibileInNavLoggedOut(this);
 	}
 
 	/// <summary>Login</summary>
@@ -328,6 +378,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => global::Umbraco.Web.PublishedModels.Content.GetVisibileInNavLoggedOut(this);
 	}
 
 	/// <summary>Error</summary>
@@ -368,6 +425,13 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => global::Umbraco.Web.PublishedModels.Content.GetVisibileInNavLoggedOut(this);
 	}
 
 	/// <summary>Contact Page</summary>
@@ -408,6 +472,121 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoNaviHide")]
 		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => global::Umbraco.Web.PublishedModels.Content.GetVisibileInNavLoggedOut(this);
+	}
+
+	/// <summary>about</summary>
+	[PublishedModel("about")]
+	public partial class About : PublishedContentModel, IContent
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "about";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<About, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public About(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// body
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("aboutBody")]
+		public global::System.Web.IHtmlString AboutBody => this.Value<global::System.Web.IHtmlString>("aboutBody");
+
+		///<summary>
+		/// title
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("aboutTitle")]
+		public string AboutTitle => this.Value<string>("aboutTitle");
+
+		///<summary>
+		/// page name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("pageName")]
+		public string PageName => global::Umbraco.Web.PublishedModels.Content.GetPageName(this);
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => global::Umbraco.Web.PublishedModels.Content.GetVisibileInNavLoggedOut(this);
+	}
+
+	/// <summary>Profile page</summary>
+	[PublishedModel("profilePage")]
+	public partial class ProfilePage : PublishedContentModel, IContent
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const string ModelTypeAlias = "profilePage";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<ProfilePage, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public ProfilePage(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// page name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("pageName")]
+		public string PageName => global::Umbraco.Web.PublishedModels.Content.GetPageName(this);
+
+		///<summary>
+		/// umbracoNaviHide
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide => global::Umbraco.Web.PublishedModels.Content.GetUmbracoNaviHide(this);
+
+		///<summary>
+		/// visibileInNavLoggedOut
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("visibileInNavLoggedOut")]
+		public bool VisibileInNavLoggedOut => global::Umbraco.Web.PublishedModels.Content.GetVisibileInNavLoggedOut(this);
 	}
 
 	/// <summary>Folder</summary>
@@ -570,6 +749,13 @@ namespace Umbraco.Web.PublishedModels
 		// properties
 
 		///<summary>
+		/// image
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
+		[ImplementPropertyType("memberImage")]
+		public global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue MemberImage => this.Value<global::Umbraco.Core.PropertyEditors.ValueConverters.ImageCropperValue>("memberImage");
+
+		///<summary>
 		/// Is Approved
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
@@ -623,14 +809,14 @@ namespace Umbraco.Web.PublishedModels
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoMemberPasswordRetrievalAnswer")]
-		public global::System.DateTime UmbracoMemberPasswordRetrievalAnswer => this.Value<global::System.DateTime>("umbracoMemberPasswordRetrievalAnswer");
+		public string UmbracoMemberPasswordRetrievalAnswer => this.Value<string>("umbracoMemberPasswordRetrievalAnswer");
 
 		///<summary>
 		/// Password Question
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "8.9.1")]
 		[ImplementPropertyType("umbracoMemberPasswordRetrievalQuestion")]
-		public global::System.DateTime UmbracoMemberPasswordRetrievalQuestion => this.Value<global::System.DateTime>("umbracoMemberPasswordRetrievalQuestion");
+		public string UmbracoMemberPasswordRetrievalQuestion => this.Value<string>("umbracoMemberPasswordRetrievalQuestion");
 	}
 
 }

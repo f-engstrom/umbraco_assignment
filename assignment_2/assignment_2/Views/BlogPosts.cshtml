@@ -1,5 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.BlogPosts>
 @using Umbraco.Core.Models.PublishedContent
+@using Umbraco.Core.PropertyEditors.ValueConverters;
+
 
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
@@ -15,6 +17,8 @@
 {
 
 	var author = item.Value<IPublishedContent>("blogPostAuthor");
+	var imgCropper = item.Value<ImageCropperValue>("blogPostImage");
+	var imgUrl = imgCropper.Src + imgCropper.GetCropUrl("Main");	
 		
 					<article class="post">
 								<header>
@@ -28,7 +32,7 @@
 										<a href="#" class="author"><span class="name">@author.Name</span><img src="images/avatar.jpg" alt="" /></a>
 									</div>
 								</header>
-								<a href="single.html" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
+								<a href="@item.Url" class="image featured"><img src="@imgUrl" alt="" /></a>
 								<p>@item.Value("blogPostExcerpt")</p>
 								<footer>
 									<ul class="actions">
